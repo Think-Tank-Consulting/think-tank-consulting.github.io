@@ -1,4 +1,4 @@
-# Github Globe
+# ThinkTank Consulting
 
 ![github-globe made by Zhanar Osmonaliev](https://janarosmonaliev.github.io/github-globe/src/files/github-globe-banner.png)
 
