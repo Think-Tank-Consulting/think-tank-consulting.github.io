@@ -68,14 +68,14 @@ a:hover {
 
 
 /*About*/
-.main_box{
+.about{
   position: relative;
   background: url('side.jpeg') right no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100%;
 }
-.main_box .sidebar_menu{
+.about .sidebar_menu{
   position: fixed;
   height: 100%;
   width: 90%;
@@ -144,7 +144,7 @@ a:hover {
 #check{
   display: none;
 }
-.main_box .btn_one i{
+.about .btn_one i{
   color: #fff;
   font-size: 30px;
   font-weight: 700;
