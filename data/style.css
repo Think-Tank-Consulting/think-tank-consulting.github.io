@@ -197,9 +197,9 @@ Nav CSS
 	justify-content: center;
 }
 .nav nav {
-	margin: 27px auto 0;
-
-	position: fixed;
+	margin: 0;
+	position: absolute;
+	top: 0px;
 	width: 590px;
 	height: 50px;
 	background-color: #34495e;
