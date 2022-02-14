@@ -1,43 +1,36 @@
-# ThinkTank Consulting
+# Steps
 
-![github-globe made by Zhanar Osmonaliev](https://janarosmonaliev.github.io/github-globe/src/files/github-globe-banner.png)
+**Steps** is a project showing your steps around the world. This project is based on **WebGL Globe** created by Google Data Arts Team (https://github.com/dataarts/webgl-globe).
 
-## Inspiration
+You can mark the cities you have travelled on the globe, and link them to your blog post.
 
-This project was inspired by [Github's homepage](https://github.com/home), where they display real-time Github activity on a globe map.
+**Steps** supports data in `JSON` format. `globe.js` makes heavy use of the `Three.js` library (https://github.com/mrdoob/three.js).
 
-## Implementation
+![](https://raw.githubusercontent.com/foreverbell/steps/master/img/steps.png)
 
-The globe is constructed with [three-globe](https://github.com/vasturiano/three-globe), a ThreeJS data-visualization project made by [@vasturiano](https://github.com/vasturiano). Then, the scene is shaded with a dim ambient light and multiple directional lights to resemble a dreamy space environment. The globe's `MeshPhongMaterial` is also adjusted to fit the environment.
+# Data Format
 
-## [Live demo](https://janarosmonaliev.github.io/github-globe/)
+The following illustrates the `JSON` data format that we except:
 
-All my attended/cancelled flights (2019-2020) are displayed on the globe. If you try to follow one arc, that would be the sequence of my travel destinations. Red arcs are cancelled flights.
+	var data = [
+		[cityName, latitude, longitude, colorHue, linkURI],
+		...
+	]
 
-## Documentation
+Here, the first three items are the city's name and location, then `colorHue` means the hue of city's color (See `HSL` on `Wikipedia`, http://en.wikipedia.org/wiki/HSL_and_HSV, **which should between 0.0 and 1.0**), and the last one `linkURI` is the new URL to open when the user clicks the respective city on the globe.
 
-Please visit [three-globe](https://github.com/vasturiano/three-globe) for detailed documentation if you want to edit the `Globe` object to add data visualization. Speaking of the Glow, `three-globe` does not let you access the glow mesh object yet, so the default glow was turned off and a separate `three-glow-mesh` is added to the scene instead.
+See the `city.json` in `/data` as an example.
 
-## Usage
+# Example
 
-This project is bundled with [Webpack](https://webpack.js.org/):
+**Steps** can easily be ported to your blog, here is an example, see http://foreverbell.github.io/steps/ .
 
-```json
-"build": "webpack --config=webpack.prod.js",
-"build-dev": "webpack --config=webpack.dev.js",
-"start": "webpack serve webpack-dev-server --open --config=webpack.dev.js"
-```
+# Local Test
 
-Details:
+We recommend you use `python` to set up a simple http server. 
 
-```bash
-npm start        # development build in ./dist
-npm run build    # static production build in ./
-```
-## Giving Back
+Run command `python -m SimpleHTTPServer`, or just simply `make server`, then go to `http://127.0.0.1:8000/` to see what happens :)
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L398E7PKP47E8&currency_code=USD&source=url) If this project has helped you and you'd like to contribute back, you can always [buy me a ☕](https://www.paypal.com/donate/?business=6LRWX3PGM4376&no_recurring=0&currency_code=USD)!
+# License
 
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+Apache License, Version 2.0.
