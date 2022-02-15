@@ -27,6 +27,16 @@ body {
 	background: url(../img/comingsoon.png);
 }
 
+#wmp-container {
+	width: 149px;
+	height: 149px;
+	position: absolute;
+	display: block;
+	top: 0px;
+	right: 0px;
+	border: 0;
+}
+
 #options {
 	width: 150px;
 	position: absolute;
@@ -98,14 +108,13 @@ a:hover {
 }
 .sidebar_menu .logo{
   position: absolute;
-
   width: 100%;
 	background: black;
   height: 60px;
   box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5);
 }
 .sidebar_menu .logo a{
-  color: #fff;
+  color: #00ff03;
   font-size: 40px;
   font-weight: bold;
   position: absolute;
@@ -122,7 +131,8 @@ a:hover {
 	right: 20%;
 	font-weight: bold;
 	font-size: 25px;
-	color: #00ff03 ;
+	color: #fff;
+	text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px #00ff03;
 }
 
 .sidebar_menu .paragraph a{
@@ -215,6 +225,7 @@ Nav CSS
 	background-color: #34495e;
 	border-radius: 8px;
 	font-size: 0;
+	box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 #00ff03;
 }
 nav a {
 	line-height: 50px;
