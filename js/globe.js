@@ -99,7 +99,7 @@ DAT.Globe = function(container, opts) {
     h = container.offsetHeight || window.innerHeight;
 
     // camera & scene {{{
-    camera = new THREE.PerspectiveCamera(45, w / h, 1, 20000);
+    camera = new THREE.PerspectiveCamera(35, w / h, 1, 20000);
     camera.position.z = distance;
 
     // make China faced to user
