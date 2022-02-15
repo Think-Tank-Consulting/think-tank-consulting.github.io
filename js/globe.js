@@ -9,7 +9,7 @@
  * You may obtain a copy of the License at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Modified by foreverbell<dql.foreverbell#gmail.com> to use it in
  * the project steps.
  */
@@ -101,7 +101,7 @@ DAT.Globe = function(container, opts) {
     // camera & scene {{{
     camera = new THREE.PerspectiveCamera(30, w / h, 1, 20000);
     camera.position.z = distance;
-    
+
     // make China faced to user
     target.x = 0.5;
 
@@ -159,9 +159,9 @@ DAT.Globe = function(container, opts) {
       var vertex = new THREE.Vector3(x, y, 0);
       geometry.vertices.push(vertex);
     }
-    material = new THREE.LineBasicMaterial({ 
-      color: 0xcccccc, 
-      linewidth: 2 
+    material = new THREE.LineBasicMaterial({
+      color: 0xcccccc,
+      linewidth: 2
     });
     circleMesh = new THREE.Line(geometry, material);
     for (i = 0; i < 3; i += 1) {
@@ -172,7 +172,7 @@ DAT.Globe = function(container, opts) {
       scene.add(focusCircles[i]);
     }
     // }}}
-    
+
     // starfield-background {{{
     var texture = THREE.ImageUtils.loadTexture(imgDir + 'starfield.png');
     texture.wrapS = THREE.RepeatWrapping;
@@ -190,13 +190,15 @@ DAT.Globe = function(container, opts) {
 
     starfieldMesh = new THREE.Mesh(new THREE.CubeGeometry(10001, 10001, 10001), new THREE.MeshFaceMaterial(cubeMaterials));
     starfieldMesh.name = 'starfield';
-    scene.add(starfieldMesh); 
+    scene.add(starfieldMesh);
     // }}}
-    
+
     // auto-spin {{{
-    spinTimer = setInterval( function() { rotate(0.0005); }, spinInterval);
+    spinTimer = setInterval( function() { rotate(0.002); }, spinInterval);
+    //spinTimer = setInterval( function() { rotate(0.0005); }, spinInterval);
+
     // }}}
-    
+
     renderer = new THREE.WebGLRenderer({antialias: true});
     renderer.setSize(w, h);
     renderer.domElement.style.position = 'absolute';
@@ -213,7 +215,7 @@ DAT.Globe = function(container, opts) {
       overRenderer = false;
       clearActiveCity();
     }, false);
-    
+
     document.addEventListener('keydown', onDocumentKeyDown, false);
     window.addEventListener('resize', onWindowResize, false);
   }
@@ -222,14 +224,14 @@ DAT.Globe = function(container, opts) {
     var lat, lng, color, uri, i, colorFnWrapper;
 
     colorFnWrapper = function(data, i) { return colorFn(data[i][3]); }
-    
+
     for (i = 0; i < data.length; i += 1) {
       city = data[i][0];
       lat = data[i][1];
       lng = data[i][2];
       color = colorFnWrapper(data, i);
       uri = data[i][4];
-   
+
       addCity(lat, lng, city, color, uri);
       pointMesh.push(point);
       textMesh.push(text);
@@ -248,7 +250,7 @@ DAT.Globe = function(container, opts) {
 
     var point3d = new THREE.CubeGeometry(1, 1, 0.5);
     point = new THREE.Mesh(point3d, material);
-    
+
     point.position.x = 200 * Math.sin(phi) * Math.cos(theta);
     point.position.y = 200 * Math.cos(phi);
     point.position.z = 200 * Math.sin(phi) * Math.sin(theta);
@@ -278,7 +280,7 @@ DAT.Globe = function(container, opts) {
     text.updateMatrix();
 
     text.lookAt(text.position.clone().multiplyScalar(2));
-    
+
     for (var i = 0; i < text.geometry.faces.length; i++) {
       text.geometry.faces[i].color = color;
     }
@@ -312,7 +314,7 @@ DAT.Globe = function(container, opts) {
       if (index === -1 || dist > best) {
         index = i;
         best = dist;
-      } 
+      }
     }
 
     if (index === -1 || best < 0.9998) {
@@ -366,7 +368,7 @@ DAT.Globe = function(container, opts) {
           textMesh[newCity].updateMatrix();
         })
         .start();
-  
+
       for (var i = 0; i < 3; i += 1) {
         focusCircles[i].position = cities[activeCity].position;
         focusCircles[i].lookAt(sphere.position);
@@ -409,7 +411,7 @@ DAT.Globe = function(container, opts) {
 
     mouseDownOn = true;
   }
-  
+
   function onMouseMove(event) {
     if (mouseDownOn === true) {
       mouse.x = - event.clientX;
@@ -436,7 +438,7 @@ DAT.Globe = function(container, opts) {
           }
         }
       }, 200);
-    }  
+    }
   }
 
   function onMouseUp(event) {
@@ -541,7 +543,7 @@ DAT.Globe = function(container, opts) {
       }
     }
   });
-  
+
   this.__defineSetter__('atmosphere', function(enabled) {
     var obj = scene.getObjectByName('atmosphere', false);
     if (enabled) {
@@ -556,7 +558,7 @@ DAT.Globe = function(container, opts) {
   });
 
   init();
-  
+
   this.animate = animate;
   this.addData = addData;
   this.renderer = renderer;
@@ -565,4 +567,3 @@ DAT.Globe = function(container, opts) {
   return this;
 
 };
-
