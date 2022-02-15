@@ -12,6 +12,21 @@ body {
 	height: 100%;
 }
 
+#comingsoon span {
+	display: none;
+}
+
+#comingsoon {
+	width: 149px;
+	height: 149px;
+	position: absolute;
+	display: block;
+	top: 0px;
+	right: 0px;
+	border: 0;
+	background: url(../img/comingsoon.png);
+}
+
 #options {
 	width: 150px;
 	position: absolute;
