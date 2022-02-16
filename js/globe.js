@@ -103,7 +103,7 @@ DAT.Globe = function(container, opts) {
     //    camera = new THREE.PerspectiveCamera(35, w / h, 1, 20000);
     camera.position.z = distance;
 
-    // make United States faced to user
+    // make United States faced to user when loading the camera
     target.x = 3;
 
     projector = new THREE.Projector();
