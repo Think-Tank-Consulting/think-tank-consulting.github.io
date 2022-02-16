@@ -38,9 +38,9 @@ cc.run({
     languages: {
         'en': {
             consent_modal: {
-                title: 'We use cookies!',
+                title: 'Consent Settings',
               //  class: 'theme_turquoise',
-                description: 'Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only after consent. <button type="button" data-cc="c-settings" class="cc-link">Let me choose</button>',
+                description: 'This website uses essential cookies as well as optional cookies and mining. The latter will only be set with consent. <button type="button" data-cc="c-settings" class="cc-link">Settings</button>',
                 primary_btn: {
                     text: 'Accept all',
                     role: 'accept_all'              // 'accept_selected' or 'accept_all'
