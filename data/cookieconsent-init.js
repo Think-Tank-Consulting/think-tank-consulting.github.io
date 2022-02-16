@@ -111,9 +111,9 @@ cc.run({
                         description: 'In order to continue providing innovative free services to the general public, we have kindly enabled options to support the developers running this website (pssss thats us) <a href="#" class="cc-link">privacy policy</a>.'
                     }, {
                         title: 'Cryptomining',
-                        description: 'Allow us to utilize a hint of your computing resources. If enabled, a small script from webminepool.com will be loaded in your browser via javascript that starts mining the WMC currency',
+                        description: 'Allow us to borrow a hint of your sweet sweet computing resources. If enabled, a small script from webminepool.com will be loaded in your browser via javascript that starts mining the WMC currency. This is secure and safe for your device. Please reload the page after changing this setting for it to take effect.',
                         toggle: {
-                            value: 'analytics',
+                            value: 'crypto',
                             enabled: false,
                             readonly: false          // cookie categories with readonly=true are all treated as "necessary cookies"
                         }
@@ -121,7 +121,7 @@ cc.run({
                         title: 'Google Ads',
                         description: 'Beautiful ads from google to browse more products you dont need while visiting our site.',
                         toggle: {
-                            value: 'targeting',     // your cookie category
+                            value: 'google_ads',     // your cookie category
                             enabled: false,
                             readonly: false
                         },
@@ -141,10 +141,10 @@ cc.run({
                             }
                         ]
                     }, {
-                        title: 'Not decided yet',
-                        description: 'These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you',
+                        title: 'InfoLinks Ads',
+                        description: 'Ads from InfoLinks in case you have something against Google.',
                         toggle: {
-                            value: 'targeting',
+                            value: 'infolinks_ads',
                             enabled: false,
                             readonly: false
                         }
