@@ -40,6 +40,23 @@ body {
   transition: all 0.3s linear;
 }
 
+.BUTTON{
+    font-weight: 600;
+		position: absolute;
+
+    text-transform: none;
+    background: #161515;
+    background: #ffeec0;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+    color: #000000;
+    padding: 1em 1em;
+    cursor: pointer;
+    font-size: .8em;
+    transition: box-shadow .3s ease;
+}
+
 #wmp-container {
 	width: 149px;
 	height: 149px;
