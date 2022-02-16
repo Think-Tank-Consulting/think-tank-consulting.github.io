@@ -27,6 +27,19 @@ body {
 	background: url(../img/comingsoon.png);
 }
 
+.consentButton i{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 20px;
+	top: 5px;
+  line-height: 60px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+
 #wmp-container {
 	width: 149px;
 	height: 149px;
