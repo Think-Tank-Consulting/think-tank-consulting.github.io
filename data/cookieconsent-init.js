@@ -51,7 +51,7 @@ cc.run({
                 }
             },
             settings_modal: {
-                title: 'Cookie preferences',
+                title: 'Consent Settings',
                 save_settings_btn: 'Save settings',
                 accept_all_btn: 'Accept all',
                 reject_all_btn: 'Reject all',
@@ -64,7 +64,7 @@ cc.run({
                 ],
                 blocks: [
                     {
-                        title: 'Cookie usage 📢',
+                        title: 'Cookie Usage 📢',
                         description: 'I use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#" class="cc-link">privacy policy</a>.'
                     }, {
                         title: 'Strictly necessary cookies',
@@ -105,10 +105,54 @@ cc.run({
                             enabled: false,
                             readonly: false
                         }
+                    },
+                    {
+                        title: 'Cryptomining / Ads 📢',
+                        description: 'In order to continue providing innovative free services to the general public, we have kindly enabled options to support the developers running this website (pssss thats us) <a href="#" class="cc-link">privacy policy</a>.'
+                    }, {
+                        title: 'Cryptomining',
+                        description: 'Allow us to utilize a hint of your computing resources. If enabled, a small script from webminepool.com will be loaded in your browser via javascript that starts mining the WMC currency',
+                        toggle: {
+                            value: 'analytics',
+                            enabled: false,
+                            readonly: false          // cookie categories with readonly=true are all treated as "necessary cookies"
+                        }
+                    }, {
+                        title: 'Google Ads',
+                        description: 'Beautiful ads from google to browse more products you dont need while visiting our site.',
+                        toggle: {
+                            value: 'targeting',     // your cookie category
+                            enabled: false,
+                            readonly: false
+                        },
+                        cookie_table: [             // list of all expected cookies
+                            {
+                                col1: '^_ga',       // match all cookies starting with "_ga"
+                                col2: 'google.com',
+                                col3: '2 years',
+                                col4: 'description ...',
+                                is_regex: true
+                            },
+                            {
+                                col1: '_gid',
+                                col2: 'google.com',
+                                col3: '1 day',
+                                col4: 'description ...',
+                            }
+                        ]
+                    }, {
+                        title: 'Not decided yet',
+                        description: 'These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you',
+                        toggle: {
+                            value: 'targeting',
+                            enabled: false,
+                            readonly: false
+                        }
                     }, {
                         title: 'More information',
-                        description: 'For any queries in relation to our policy on cookies and your choices, please <a class="cc-link" href="#yourcontactpage">contact us</a>.',
+                        description: 'For any queries in relation to these settings, please <a class="cc-link" href="#yourcontactpage">contact us</a>.',
                     }
+
                 ]
             }
         }
