@@ -1426,8 +1426,8 @@ html.force--consent.show--consent body{
     --cc-text: #d8e5ea;
     --cc-btn-primary-bg: #60fed2;
     --cc-btn-primary-text: #000;
-    --cc-btn-primary-hover-bg: #4dd4ae;
-    --cc-btn-secondary-bg: #242c31;
+    --cc-btn-primary-hover-bg: #2b353c;
+    --cc-btn-secondary-bg: #fe6060;
     --cc-btn-secondary-text: var(--cc-text);
     --cc-btn-secondary-hover-bg: #2b353c;
     --cc-toggle-bg-off: #667481;

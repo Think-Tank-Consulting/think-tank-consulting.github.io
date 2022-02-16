@@ -262,6 +262,7 @@ Nav CSS
 .nav nav {
 	margin: 0;
 	align-items: center;
+	justify-content: center;
 	position: absolute;
 	top: 0px;
 	width: 70%;
