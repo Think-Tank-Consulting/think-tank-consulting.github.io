@@ -38,7 +38,7 @@ cc.run({
     languages: {
         'en': {
             consent_modal: {
-                title: 'Consent Settings',
+                title: 'Consent Settings 🍪',
               //  class: 'theme_turquoise',
                 description: 'This website uses essential cookies as well as optional cookies and mining. The latter will only be set with consent. <button type="button" data-cc="c-settings" class="cc-link">Settings</button>',
                 primary_btn: {
@@ -86,7 +86,7 @@ cc.run({
                             {
                                 col1: '^_ga',       // match all cookies starting with "_ga"
                                 col2: 'google.com',
-                                col3: '2 years',
+                                col3: '1 day',
                                 col4: 'description ...',
                                 is_regex: true
                             },
@@ -125,21 +125,7 @@ cc.run({
                             enabled: false,
                             readonly: false
                         },
-                        cookie_table: [             // list of all expected cookies
-                            {
-                                col1: '^_ga',       // match all cookies starting with "_ga"
-                                col2: 'google.com',
-                                col3: '2 years',
-                                col4: 'description ...',
-                                is_regex: true
-                            },
-                            {
-                                col1: '_gid',
-                                col2: 'google.com',
-                                col3: '1 day',
-                                col4: 'description ...',
-                            }
-                        ]
+
                     }, {
                         title: 'InfoLinks Ads',
                         description: 'Ads from InfoLinks in case you have something against Google.',
