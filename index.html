@@ -17,7 +17,10 @@
   </head>
 
   <body>
-
+    <script>
+  var gigsdivwidth = document.getElementById("gigsdiv").style.width;
+alert(gigsdivwidth);
+  </script>
   <script defer src="data/cookieconsent.js"></script>
   <script defer src="data/cookieconsent-init.js"></script>
   <!--Load the infolinks ads javascript library-->
@@ -100,11 +103,11 @@
 
   <div class="nav">
     <nav>
-  	<a href="https://think-tank-consulting.com/">Gigs</a>
-  	<a href="#">Career</a>
-  	<a href="#">Health</a>
-  	<a href="#">Learning</a>
-  	<a href="#">Contact</a>
+  	<a href="https://think-tank-consulting.com/" id="gigsdiv">Gigs</a>
+  	<a href="#" id="careerdiv">Career</a>
+  	<a href="#" id="healthdiv">Health</a>
+  	<a href="#" id="learningdiv">Learning</a>
+  	<a href="#" id="contactdiv">Contact</a>
   	<div class="animation start-home"></div>
   </nav>
   </div>

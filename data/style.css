@@ -29,12 +29,25 @@ body {
 
 .consentButton i{
   color: #fff;
-  font-size: 30px;
+  font-size: 5vmin;
   font-weight: 700;
   position: absolute;
-  left: 20px;
+  left: 5px;
 	top: 5px;
-  line-height: 60px;
+	margin: 0;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+
+.consentButton i:hover{
+  color: #00ff03 ;
+  font-size: 6vmin;
+  font-weight: 700;
+  position: absolute;
+  left: 5px;
+	top: 5px;
+	margin: 0;
   cursor: pointer;
   opacity: 1;
   transition: all 0.3s linear;
@@ -200,12 +213,11 @@ a:hover {
 }
 .about .btn_one i{
   color: #fff;
-  font-size: 30px;
+  font-size: 5vmin;
   font-weight: 700;
   position: absolute;
-  left: 16px;
-	bottom: 16px;
-  line-height: 60px;
+  left: 5px;
+	bottom: 5px;
   cursor: pointer;
   opacity: 1;
   transition: all 0.3s linear;
@@ -220,7 +232,7 @@ a:hover {
   transition: all 0.3s linear;
 }
 .btn_one i:hover{
-  font-size: 50px;
+  font-size: 6vmin;
 	color: #00ff03 ;
 }
 .btn_two i:hover{
@@ -249,9 +261,10 @@ Nav CSS
 }
 .nav nav {
 	margin: 0;
+	align-items: center;
 	position: absolute;
 	top: 0px;
-	width: 50%;
+	width: 70%;
 	height: 7%;
 	background-color: #34495e;
 	border-radius: 8px;
@@ -259,26 +272,20 @@ Nav CSS
 	box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 #00ff03;
 }
 nav a {
-	line-height: 50px;
+	line-height: normal;
 	height: 100%;
-	font-size: 15px;
+	font-size: 3vmin;
 	display: inline-block;
-	position: relative;
 	z-index: 1;
 	text-decoration: none;
 	text-transform: uppercase;
 	text-align: center;
+	align-items: center;
+  justify-content: center;
 	color: white;
 	cursor: pointer;
 }
-nav .animation {
-	position: absolute;
-	height: 100%;
-	top: 0;
-	z-index: 0;
-	transition: all .5s ease 0s;
-	border-radius: 8px;
-}
+
 nav a:nth-child(1) {
 	width: 20%;
 }
@@ -294,28 +301,20 @@ nav a:nth-child(4) {
 nav a:nth-child(5) {
 	width: 20%;
 }
-nav .start-home, a:nth-child(1):hover~.animation {
-	width: 100px;
-	left: 0;
+nav a:nth-child(1):hover {
 	background-color: #1abc9c;
+	border-radius: 8px;
 }
-nav .start-about, a:nth-child(2):hover~.animation {
-	width: 110px;
-	left: 100px;
+nav a:nth-child(2):hover {
 	background-color: #e74c3c;
 }
-nav .start-blog, a:nth-child(3):hover~.animation {
-	width: 100px;
-	left: 210px;
+nav a:nth-child(3):hover {
 	background-color: #3498db;
 }
-nav .start-portefolio, a:nth-child(4):hover~.animation {
-	width: 160px;
-	left: 310px;
+nav a:nth-child(4):hover {
 	background-color: #9b59b6;
 }
-nav .start-contact, a:nth-child(5):hover~.animation {
-	width: 120px;
-	left: 470px;
+nav a:nth-child(5):hover {
 	background-color: #e67e22;
+	border-radius: 8px;
 }
